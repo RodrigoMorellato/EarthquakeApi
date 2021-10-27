@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EarthquakeApi</name>
+    </assembly>
+    <members>
+        <member name="T:EarthquakeApi.Controllers.EarthquakeController">
+            <summary>
+            API Earthquake information
+            </summary>
+        </member>
+        <member name="M:EarthquakeApi.Controllers.EarthquakeController.GetLastTenEarthquake(System.Double,System.Double,System.DateTime,System.DateTime)">
+            <summary>
+            Verifies and return a list of the last 10 earthquakes which impacted at requested area
+            </summary>
+            <param name="latitude"></param>
+            <param name="longitude"></param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EarthquakeApi.Services.EarthquakeService.GetLastTenEarthquakeAsync(System.Double,System.Double,System.DateTime,System.DateTime)">
+            <summary>
+            Ask for a list of earthquakes that impacted the selected area and returns the 10 most recent
+            </summary>
+            <param name="latitude"></param>
+            <param name="longitude"></param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EarthquakeApi.Services.EarthquakeService.GetUsgsEarthquakeInfoAsync(System.Double,System.Double,System.DateTime,System.DateTime)">
+            <summary>
+            Ask for a list of earthquakes and returns those that fit the parameters
+            </summary>
+            <param name="latitude"></param>
+            <param name="longitude"></param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EarthquakeApi.Services.UsgsService.ReadCsv">
+            <summary>
+            It reads all lines from USGS .csv file using the file downloaded in the last hour.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EarthquakeApi.Services.UsgsService.DownloadCsv">
+            <summary>
+            It process download .csv file of USGS. It uses the file from the last hour.
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EarthquakeApi.Services.UsgsService.DownloadFile(System.String,System.String,System.String)">
+            <summary>
+            Download file and saving it at the specific path
+            </summary>
+            <param name="url"></param>
+            <param name="path"></param>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EarthquakeApi.Services.UsgsService.DeleteOldFiles">
+            <summary>
+            Only delete CSV files containing "all_month" in their filenames
+            </summary>
+        </member>
+    </members>
+</doc>
